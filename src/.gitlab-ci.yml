@@ -1,0 +1,26 @@
+stages:
+  - build
+  - test
+  - deploy
+
+# 所有 stage 之前的操作
+before_script:
+  - npm install
+
+# 构建
+build:
+  stage: test
+  script: 
+  - npm run build
+
+# 测试
+test:
+  stage: test
+  script:
+  - npm run test
+
+# 部署
+deploy:
+  stage: deploy
+  script:
+    - npm run deploy
