@@ -18,4 +18,4 @@ app.engine('html', hbs.__express);
 //路由到控制器
 let index = require("./controller/index.js");
 index(app);
-app.listen(10087);
+app.listen(10086);
